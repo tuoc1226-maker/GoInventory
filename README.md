@@ -1,69 +1,72 @@
-# Inventory Management App
+# 在庫管理アプリ
 
-## Overview
-This project is a web application designed to optimize the tracking, organization, and control of warehouse products. The backend is built with Go and Postgres, while the frontend is developed using React and TypeScript.
+## 概要
+本プロジェクトは、倉庫内の製品の追跡、整理、および管理を最適化するために設計されたWebアプリケーションです。バックエンドはGoとPostgreSQLで構築され、フロントエンドはReactとTypeScriptを使用して開発されています。
 
-## Screenshot
+## スクリーンショット
 ![imsscreenshot](https://github.com/user-attachments/assets/73eb210e-dbd1-4700-9c68-02b63d0ea3a2)
 
-## Technologies
+## 使用技術
 
-### Backend
-- **Go**: A statically typed, compiled programming language designed for simplicity and efficiency.
-- **Postgres**: A powerful, open-source object-relational database system with a strong reputation for reliability and performance.
-- **Echo**: A high-performance, minimalist web framework for Go, designed for ease of use and scalability.
-- **github.com/golang-jwt/jwt/v5**: A Go implementation of JSON Web Tokens (JWT) for secure authentication.
-- **github.com/jackc/pgx/v4**: A PostgreSQL driver and toolkit for Go, providing efficient and feature-rich database interactions.
-- **github.com/labstack/gommon**: A set of common packages for Go, including logging, color, and bytes utilities.
+### バックエンド
+- **Go**: シンプルさと効率性を重視して設計された、静的型付けのコンパイル型プログラミング言語。
+- **PostgreSQL**: 信頼性とパフォーマンスの高さで定評のある、強力なオープンソースのオブジェクト関係データベースシステム。
+- **Echo**: 使いやすさと拡張性を考慮して設計された、Go用の高性能かつミニマルなWebフレームワーク。
+- **github.com/golang-jwt/jwt/v5**: セキュアな認証を実現するための、JSON Web Tokens (JWT) のGo実装。
+- **github.com/jackc/pgx/v4**: 効率的かつ機能豊富なデータベース操作を提供する、Go用PostgreSQLドライバおよびツールキット。
+- **github.com/labstack/gommon**: ロギング、カラー出力、バイト操作ユーティリティなどを含む、Go用の共通パッケージ群。
 
-### Frontend
-- **React**: A JavaScript library for building user interfaces, maintained by Facebook and a community of individual developers and companies.
-- **TypeScript**: A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
-- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom user interfaces.
-- **js-cookie**: A simple, lightweight JavaScript API for handling cookies.
+### フロントエンド
+- **React**: Facebookおよび個人開発者・企業のコミュニティによって保守されている、ユーザーインターフェース構築用JavaScriptライブラリ。
+- **TypeScript**: JavaScriptをベースに強力な型システムを導入したプログラミング言語。あらゆる規模の開発において優れたツールサポートを提供します。
+- **Tailwind CSS**: カスタムユーザーインターフェースを迅速に構築するための、ユーティリティファーストなCSSフレームワーク。
+- **js-cookie**: Cookieを扱うための、シンプルで軽量なJavaScript API。 ## はじめに
 
-## Getting Started
+### 前提条件
+- Go 1.23.0 以降
+- Node.js 14.x 以降
+- Postgres 12 以降
 
-### Prerequisites
-- Go 1.23.0 or later
-- Node.js 14.x or later
-- Postgres 12 or later
+### インストール
 
-### Installation
+1. **リポジトリのクローン:**
+```
+sh
+git clone https://github.com/tuoc1226-maker/GoInventory.git
+cd yourproject
+```
 
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/erkindilekci/inventory-management-system.git
-   cd yourproject
-   ```
+2. **バックエンドのセットアップ:**
+```
+sh
+cd server
+go mod download
+go build -o ./ims cmd/imsapi/main.go
+```
 
-2. **Backend Setup:**
-   ```sh
-   cd server
-   go mod download
-   go build -o ./ims cmd/imsapi/main.go
-   ```
+3. **フロントエンドのセットアップ:**
+```
+sh
+cd client
+npm install
+npm run dev
+```
 
-3. **Frontend Setup:**
-   ```sh
-   cd client
-   npm install
-   npm run dev
-   ```
+### アプリケーションの実行
 
-### Running the Application
+1. **バックエンドの起動:**
+```
+sh
+cd server
+./ims
+```
 
-1. **Start the Backend:**
-   ```sh
-   cd server
-   ./ims
-   ```
+2. **フロントエンドの起動:**
+```
+sh
+cd client
+npm run dev
+```
 
-2. **Start the Frontend:**
-   ```sh
-   cd client
-   npm run dev
-   ```
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## ライセンス
+本プロジェクトは MIT ライセンスの下で公開されています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
