@@ -1,5 +1,7 @@
 # Inventory Management App
 
+[🇯🇵 日本語](README.md) | [🇺🇸 English](README.en.md)
+
 ## Overview
 This project is a web application designed to optimize the tracking, organization, and control of warehouse products. The backend is built with Go and Postgres, while the frontend is developed using React and TypeScript.
 
